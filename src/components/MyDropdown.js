@@ -1,19 +1,22 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
+import { changeNumberDropdown } from '../actions/dropdownActions';
 
 class MyDropdown extends Component {
-    constructor(props){
+    constructor(props) {
         super(props)
     }
 
-    handleOnchangeDropdown(e){
+    handleOnchangeDropdown(e) {
         console.log("dropdown change");
-        console.log(e.target.value);
+        console.log(e.target.value)
+        const val = e.target.value
+        this.props.changeThisDropdown(val)
     }
 
     render() {
         return (
-            <select onChange={e=>this.handleOnchangeDropdown(e)}>
+            <select onChange={e => this.handleOnchangeDropdown(e)}>
                 <option value="1">One</option>
                 <option value="2">Two</option>
                 <option value="3">Three</option>
@@ -22,6 +25,16 @@ class MyDropdown extends Component {
     }
 }
 
+const mapStateToProps = (state, ownProps) => {
+    return {}
+}
 
+const mapDispatchToProps = (dispatch, ownProps) => {
+    return {
+        changeThisDropdown: (value) => {
+            dispatch(changeNumberDropdown(value))
+        }
+    }
+}
 
-export default MyDropdown
+export default connect(mapStateToProps,mapDispatchToProps)(MyDropdown);

@@ -1,5 +1,5 @@
 export default{
-    search:{
-        suggestions:[]
+    dropdown:{
+        numberDropdownValue: ''
     }
 } 

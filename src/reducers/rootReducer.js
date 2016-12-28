@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux'
-import search from './searchReducer'
+import dropdown from './dropdownReducer'
 
 const rootReducer = combineReducers({
-    search
+    dropdown
 })
 
 export default rootReducer
