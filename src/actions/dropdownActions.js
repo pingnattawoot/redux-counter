@@ -6,3 +6,12 @@ export const changeNumberDropdown = (value) => {
         value: value
     }
 }
+
+export const changeTextInput = (text) => {
+    return {
+        type: types.CHANGE_TEXT_INPUT,
+        value: text
+    }
+}
+
+

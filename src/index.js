@@ -10,7 +10,7 @@ import configureStore from './store/configureStore'
 
 import MyDropdown from './components/MyDropdown'
 import MyLabel from './components/MyLabel'
-
+import MyInput from './components/MyInput'
 
 injectTapEventPlugin()
 
@@ -20,6 +20,7 @@ render(
         <div>
             <MyDropdown />
             <MyLabel />
+            <MyInput />
         </div>
     </Provider>
     ,

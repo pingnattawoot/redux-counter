@@ -1,2 +1,4 @@
 'use strict'
 export const CHANGE_NUMBER_DROPDOWN = 'CHANGE_NUMBER_DROPDOWN';
+export const CHANGE_TEXT_INPUT = 'CHANGE_TEXT_INPUT';
+

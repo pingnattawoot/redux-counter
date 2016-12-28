@@ -1,24 +1,21 @@
 import React, { Component, PropTypes } from 'react'
 import { connect } from 'react-redux';
 
-class MyLabel extends Component {
-
-    render() {
-        return (
-            <div>
-                value : {this.props.valueDropdown}
-            </div>
-        )
-    }
+const MyLabel = (props) => {
+    return (
+        <div style={{background:'red'}}>
+            value : {props.valueInput}
+        </div>
+    )
 }
 
 MyLabel.propTypes = {
-    valueDropdown: PropTypes.string.isRequired
+    valueInput: PropTypes.string.isRequired
 }
 
 const mapStateToProps = (state, ownProps) => {
     return {
-        valueDropdown: state.dropdown.numberDropdownValue
+        valueInput: state.input.inputValue
     }
 }
 
