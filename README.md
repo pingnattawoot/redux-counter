@@ -1,2 +1,2 @@
 # redux-counter
-just redux counter
+Redux searchbox
